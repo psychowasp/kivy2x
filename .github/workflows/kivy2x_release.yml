@@ -126,6 +126,6 @@ jobs:
           for FILE in wheels/*.whl; do
             BASENAME=$(basename "$FILE")
             echo "Uploading $BASENAME"
-            aws s3 cp "$FILE" "s3://pypi-packages/packages/$BASENAME" \
+            aws s3 cp "$FILE" "s3://kivyschool-pypi/packages/$BASENAME" \
               --endpoint-url "$ENDPOINT"
           done
